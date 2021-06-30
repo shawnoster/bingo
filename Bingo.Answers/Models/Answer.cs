@@ -16,6 +16,7 @@ namespace Bingo.Answers.Models
         ]
         public string Condition { get; set; }
 
+        [Required]
         [StringLength(
             60,
             MinimumLength = 1,
