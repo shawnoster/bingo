@@ -11,8 +11,19 @@ namespace Bingo.Answers.Data
     /// </summary>
     public interface IContainerContext<T> where T : Entity
     {
+        /// <summary>
+        /// Name of the CosmosDB container
+        /// </summary>
         string ContainerName { get; }
+
+        /// <summary>
+        /// Generate ID
+        /// </summary>
         string GenerateId(T entity);
+
+        /// <summary>
+        /// Resolve the partition key
+        /// </summary>
         PartitionKey ResolvePartitionKey(string entityId);
     }
 }

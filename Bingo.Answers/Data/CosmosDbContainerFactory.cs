@@ -1,5 +1,5 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT license.using System
+// Copyright (c) Shawn Oster. All rights reserved.
+// Licensed under the MIT license.
 
 namespace Bingo.Answers.Data
 {
