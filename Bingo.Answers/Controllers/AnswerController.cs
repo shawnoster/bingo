@@ -30,6 +30,8 @@
             }
             await _repository.AddItemAsync(newAnswer);
 
+            _logger.LogInformation("Created Answer");
+
             return Ok();
         }
 
