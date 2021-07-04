@@ -1,7 +1,7 @@
 // Copyright (c) Shawn Oster. All rights reserved.
 // Licensed under the MIT license.
 
-namespace Bingo.Answers.Settings
+namespace Bingo.Answers.Options
 {
     public enum ConnectionStringMode
     {
@@ -9,13 +9,13 @@ namespace Bingo.Answers.Settings
         Emulator
     }
 
-    public class ConnectionStringsSettings
+    public class ConnectionStringsOptions
     {
         public ConnectionStringMode ConnectionMode { get; set; }
-        public ConnectionStringSettings Azure { get; set; }
-        public ConnectionStringSettings Emulator { get; set; }
+        public ConnectionStringOptions Azure { get; set; }
+        public ConnectionStringOptions Emulator { get; set; }
 
-        public ConnectionStringSettings ActiveConnectionStringOptions =>
+        public ConnectionStringOptions ActiveConnectionStringOptions =>
             ConnectionMode == ConnectionStringMode.Azure ? Azure : Emulator;
     }
 }
