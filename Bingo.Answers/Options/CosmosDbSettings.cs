@@ -8,6 +8,11 @@ namespace Bingo.Answers.Options
     public class CosmosDbOptions
     {
         /// <summary>
+        /// Configuration section
+        /// </summary>
+        public const string CosmosDb = "CosmosDb";
+
+        /// <summary>
         /// Database name
         /// </summary>
         public string DatabaseName { get; set; }

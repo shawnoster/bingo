@@ -11,6 +11,8 @@ namespace Bingo.Answers.Options
 
     public class ConnectionStringsOptions
     {
+        public const string ConnectionStrings = "ConnectionStrings";
+
         public ConnectionStringMode ConnectionMode { get; set; }
         public ConnectionStringOptions Azure { get; set; }
         public ConnectionStringOptions Emulator { get; set; }

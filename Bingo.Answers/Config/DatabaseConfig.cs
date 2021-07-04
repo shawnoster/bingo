@@ -19,8 +19,14 @@ namespace Bingo.Answers.Config
         public static void SetupCosmosDb(this IServiceCollection services, IConfiguration configuration)
         {
             // Bind database options. Invalid configuration will terminate the application startup.
-            ConnectionStringsOptions connectionStringsSettings = configuration.GetSection("ConnectionStrings").Get<ConnectionStringsOptions>();
-            CosmosDbOptions cosmosDbSettings = configuration.GetSection("CosmosDb").Get<CosmosDbOptions>();
+            ConnectionStringsOptions connectionStringsSettings = configuration
+                .GetSection(ConnectionStringsOptions.ConnectionStrings)
+                .Get<ConnectionStringsOptions>();
+
+            CosmosDbOptions cosmosDbSettings = configuration
+                .GetSection(CosmosDbOptions.CosmosDb)
+                .Get<CosmosDbOptions>();
+
             var (serviceEndpoint, primaryKey) = connectionStringsSettings.ActiveConnectionStringOptions;
 
             // register CosmosDB client and data repositories
