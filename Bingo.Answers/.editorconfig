@@ -9,9 +9,14 @@ max_line_length = 90
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
+file_header_template = Copyright (c) Shawn Oster. All rights reserved.\nLicensed under the MIT license.
 
 [*.json]
 indent_size = 2
+
+# 'using' directive preferences
+[*.cs]
+csharp_using_directive_placement = inside_namespace
 
 [*.{cs,vb}]
 dotnet_style_qualification_for_field = false:error
@@ -37,4 +42,6 @@ dotnet_naming_symbols.private_fields.applicable_accessibilities = private
 dotnet_naming_style.prefix_underscore.capitalization = camel_case
 dotnet_naming_style.prefix_underscore.required_prefix = _
 
-file_header_template = Copyright (c) Shawn Oster. All rights reserved.\nLicensed under the MIT license.
+# .NET formatting rules
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
