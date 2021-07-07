@@ -10,6 +10,9 @@ All project settings:
 
 ```json
 {
+"ApplicationInsights": {
+    "ConnectionString": "<APPLICATION_INSIGHTS_CONNECTIONSTRING>"
+  },
   "ConnectionStrings": {
     "ConnectionMode": "<Azure | Emulator>",
     "Azure": {
@@ -75,7 +78,7 @@ To successful configure the application ensure all the required infrastructure i
 
 For development, Secret Manager is used to store secrets that should be kept separate from application settings.
 
-This project has already been enabled for Secret Manager use, which adds a `UserSecretsId` properity to the project, but for the curious, to enable a project to use the Secret Manager:
+This project has already been enabled for Secret Manager use, which adds a `UserSecretsId` property to the project, but for the curious, to enable a project to use the Secret Manager:
 
 ```powershell
 # Enable Secret Manager for project
@@ -88,16 +91,18 @@ Add the sensitive keys:
 ```powershell
 dotnet user-secrets set "ConnectionStrings:Azure:PrimaryKey" "<YOUR-AZURE-PRIMARYKEY>"
 dotnet user-secrets set "ConnectionStrings:Emulator:PrimaryKey" "<YOUR-EMULATOR-PRIMARYKEY>"
+dotnet user-secrets set "ApplicationInsights:ConnectionString" "<YOUR-APP-INSIGHTS-CONNECTIONSTRING>"
+
 ```
 
 ### Add secrets to secret store (Deployed)
 
 Key Vault
 
-* `ConnectionStrings--Azure--PrimaryKey`
-* `ConnectionStrings--Emulator--PrimaryKey`
-* `Secrets--ClientId`
-* `Secrets--ClientSecret`
+- `ConnectionStrings--Azure--PrimaryKey`
+- `ConnectionStrings--Emulator--PrimaryKey`
+- `Secrets--ClientId`
+- `Secrets--ClientSecret`
 
 ---
 
