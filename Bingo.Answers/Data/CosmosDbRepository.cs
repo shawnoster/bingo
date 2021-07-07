@@ -37,10 +37,11 @@ namespace Bingo.Answers.Data
             _container = _cosmosDbContainerFactory.GetContainer(ContainerName).Container;
         }
 
-        public async Task AddItemAsync(T item)
+        public async Task<T> AddItemAsync(T item)
         {
             item.Id = GenerateId(item);
             await _container.CreateItemAsync<T>(item, ResolvePartitionKey(item.Id));
+            return item;
         }
 
         public async Task DeleteItemAsync(string id)

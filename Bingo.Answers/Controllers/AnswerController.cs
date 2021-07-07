@@ -30,12 +30,16 @@
             }
             await _repository.AddItemAsync(newAnswer);
 
+            _logger.LogInformation("Created Answer");
+
             return Ok();
         }
 
         [HttpGet("{answerId}")]
         public async Task<ActionResult> GetAnswer(string answerId)
         {
+            _logger.LogInformation($"Get Answer {answerId}");
+
             try
             {
                 var answer = await _repository.GetItemAsync(answerId);

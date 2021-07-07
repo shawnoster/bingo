@@ -9,7 +9,7 @@ namespace Bingo.Answers.Extensions
     using Microsoft.Azure.Cosmos.Fluent;
     using Microsoft.Extensions.DependencyInjection;
     using Bingo.Answers.Data;
-    using Bingo.Answers.Settings;
+    using Bingo.Answers.Options;
 
     public static class IServiceCollectionExtensions
     {

@@ -22,7 +22,8 @@ namespace Bingo.Answers
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // Cosmos DB for application data
+            services.AddApplicationInsightsTelemetry();
+
             services.SetupCosmosDb(Configuration);
 
             services.AddControllers();

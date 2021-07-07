@@ -8,7 +8,7 @@ namespace Bingo.Answers.Data
     using System.Threading.Tasks;
     using System.Linq;
     using Microsoft.Azure.Cosmos;
-    using Bingo.Answers.Settings;
+    using Bingo.Answers.Options;
 
     public class CosmosDbContainerFactory : ICosmosDbContainerFactory
     {

@@ -4,9 +4,10 @@
 namespace Bingo.Answers.Data
 {
     using System;
-    using Microsoft.Azure.Cosmos;
+
     using Bingo.Answers.Interfaces;
     using Bingo.Answers.Models;
+    using Microsoft.Azure.Cosmos;
 
     public class AnswerRepository : CosmosDbRepository<Answer>, IAnswerRepository
     {

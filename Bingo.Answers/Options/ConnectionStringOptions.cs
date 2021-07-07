@@ -1,9 +1,9 @@
 // Copyright (c) Shawn Oster. All rights reserved.
 // Licensed under the MIT license.
 
-namespace Bingo.Answers.Settings
+namespace Bingo.Answers.Options
 {
-    public class ConnectionStringSettings
+    public class ConnectionStringOptions
     {
         public string ServiceEndpoint { get; set; }
         public string PrimaryKey { get; set; }
